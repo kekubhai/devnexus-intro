@@ -6,6 +6,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Box } from '@react-three/drei'
 import { motion, useMotionValue, useTransform, AnimatePresence } from 'framer-motion'
 import { Github, Linkedin, Mail, Phone } from 'lucide-react'
+import path from 'path'
 
 const useOutsideClick = (ref: unknown, callback: unknown) => {
   useEffect(() => {
@@ -31,6 +32,7 @@ interface TeamMemberProps {
   linkedin: string
   github: string
   photo: string
+  expandedPhoto:string
 }
 
 const HoveringObject = ({ isHovered }) => {
@@ -197,7 +199,7 @@ export function ExpandableTeamMemberCards({ teamMembers }: { teamMembers: TeamMe
                   priority
                   width={500}
                   height={500}
-                  src={active.photo}
+                  src={active.expandedPhoto}
                   alt={active.name}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
@@ -299,7 +301,8 @@ export default function TeamPage() {
       year: "2nd",
       linkedin: "https://linkedin.com/in/amitava-datta",
       github: "https://github.com/amitava-datta",
-      photo: "/dev/Amitava.jpg"
+      photo: "/public/devImages/Anirban.jpg",
+      expandedPhoto: "/public/devImages/Anirban.jpg"
     },
     {
       name: "Pranay De",
@@ -310,7 +313,8 @@ export default function TeamPage() {
       year: "2nd",
       linkedin: "https://linkedin.com/in/pranay-de",
       github: "https://github.com/pranay-de",
-      photo: "/dev/Pranay.jpg"
+      photo: "/dev/Pranay.jpg",
+      expandedPhoto: ''
     },
     {
       name: "Anirban Ghosh",
@@ -321,7 +325,8 @@ export default function TeamPage() {
       year: "2nd",
       linkedin: "https://linkedin.com/in/anirban-ghosh",
       github: "https://github.com/anirban-ghosh",
-      photo: "/dev/Anirban.jpg"
+      photo: "/dev/Anirban.jpg",
+      expandedPhoto: ''
     },
     {
       name: "Srinjinee Mitra",
@@ -332,7 +337,8 @@ export default function TeamPage() {
       year: "2nd",
       linkedin: "https://linkedin.com/in/srinjinee-mitra",
       github: "https://github.com/srinjinee-mitra",
-      photo: "/dev/Srinjinee.jpg"
+      photo: "/dev/Srinjinee.jpg",
+      expandedPhoto: ''
     },
     {
       name: "Aitijhya Roy",
@@ -343,7 +349,8 @@ export default function TeamPage() {
       year: "2nd",
       linkedin: "https://linkedin.com/in/aitijhya-roy",
       github: "https://github.com/aitijhya-roy",
-      photo: "/dev/Aitijhya.jpg"
+      photo: "/dev/Aitijhya.jpg",
+      expandedPhoto: ''
     },
     {
       name: "Rudranil Das",
@@ -354,7 +361,8 @@ export default function TeamPage() {
       year: "2nd",
       linkedin: "https://linkedin.com/in/rudranil-das",
       github: "https://github.com/rudranil-das",
-      photo: "/public/devImages/Rudranil.jpg"
+      photo: "/public/devImages/Rudranil.jpg",
+      expandedPhoto: ''
     },
   ];
 
