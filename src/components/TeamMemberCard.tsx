@@ -6,7 +6,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Box } from '@react-three/drei'
 import { motion, useMotionValue, useTransform, AnimatePresence } from 'framer-motion'
 import { Github, Linkedin, Mail, Phone } from 'lucide-react'
-import path from 'path'
+
 
 const useOutsideClick = (ref: unknown, callback: unknown) => {
   useEffect(() => {
