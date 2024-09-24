@@ -7,6 +7,9 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Sphere, MeshDistortMaterial } from '@react-three/drei'
 import { useRef } from 'react'
 import Navbar from '@/components/navbarwithmenu'
+import Timeline from '@/components/ui/timeline2'
+import Image from 'next/image'
+
 
 
 function AnimatedSphere() {
@@ -49,6 +52,11 @@ export default function Home() {
            <Navbar/>
         <h1 className="mb-8 bg-clip-text text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           Meet the Team - DEV-NEXUS
+          <Image
+          src="/check3.jpg"
+          width={40}
+          height={50}
+          alt='team'/>
         </h1>
         <p className="mb-8 max-w-2xl text-lg sm:text-xl text-gray-300">
           We are a team of six passionate 2nd-year engineering students from Techno Main Salt Lake, 
@@ -86,7 +94,10 @@ export default function Home() {
             Discover Our Journey
           </Button>
         </Link>
+        
+        <Timeline/>
       </div>
+     
     </main>
   )
 }
